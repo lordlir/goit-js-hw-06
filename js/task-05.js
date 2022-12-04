@@ -1,12 +1,14 @@
 const textInput = document.querySelector("#name-input");
-console.log(textInput);
+// console.log(textInput);
 
 const textOutput = document.querySelector("#name-output");
-console.log(textOutput);
+// console.log(textOutput);
 
 textInput.addEventListener(
   "input",
   (event) =>
     (textOutput.textContent =
-      event.currentTarget.value === "" ? "Anonimus" : event.currentTarget.value)
+      event.currentTarget.value === ""
+        ? "Anonymous"
+        : event.currentTarget.value)
 );

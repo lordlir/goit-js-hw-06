@@ -14,7 +14,7 @@ const images = [
 ];
 
 const listGallRef = document.querySelector(".gallery");
-console.log(listGallRef);
+// console.log(listGallRef);
 
 // for (const { url, alt } of images) {
 // const itemGallRef = document.createElement("li");

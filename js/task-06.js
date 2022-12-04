@@ -1,9 +1,9 @@
 const textInputElem = document.querySelector("#validation-input");
-console.log(textInputElem);
+// console.log(textInputElem);
 const lengthValule = document.querySelector('input[data-length="6"]');
-console.log(lengthValule.dataset.length);
+// console.log(lengthValule.dataset.length);
 const lengthDefoltRef = Number(lengthValule.dataset.length);
-console.log(lengthDefoltRef);
+// console.log(lengthDefoltRef);
 
 textInputElem.addEventListener("blur", validaionInputOfLength);
 
@@ -34,5 +34,5 @@ function validaionInputOfLength() {
       textInputElem.classList.add("invalid");
       break;
   }
-  console.log(textInputLength);
+  //   console.log(textInputLength);
 }

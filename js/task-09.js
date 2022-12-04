@@ -1,13 +1,13 @@
 const spanRef = document.querySelector(".color");
-console.log(spanRef.textContent);
+// console.log(spanRef.textContent);
 
 const btnChangeColor = document.querySelector(".change-color");
-console.log(btnChangeColor);
+// console.log(btnChangeColor);
 
 btnChangeColor.addEventListener("click", () => {
   document.body.style.background = getRandomHexColor();
   spanRef.textContent = getRandomHexColor();
-  console.log(spanRef.textContent);
+  // console.log(spanRef.textContent);
 });
 
 function getRandomHexColor() {
