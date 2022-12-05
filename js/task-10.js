@@ -9,21 +9,23 @@ const inputElem = document.querySelector("#controls input");
 const btnCreate = document.querySelector("button[data-create]");
 
 btnCreate.addEventListener("click", function creteNewArr() {
-  const num = [];
+  const elements = [];
   for (let i = 1; i <= inputElem.value; i++) {
-    num.push(i);
-  }
-  console.log(num);
-  num.map((elem) => {
     const newDiv = document.createElement("div");
-    newDiv.classList.add(".new-div");
-    newDiv.style.width = `${20 + elem * 10}px`;
-    newDiv.style.height = `${20 + elem * 10}px`;
+    const parametr = `${20 + i * 10}px`;
+    newDiv.style.width = parametr;
+    newDiv.style.height = parametr;
     newDiv.style.background = getRandomHexColor();
-    boxGallery.append(newDiv);
-  });
+    newDiv.style.border = " 1px solid black";
+    elements.push(newDiv);
+  }
+  console.log(elements);
+  boxGallery.append(...elements);
+  console.log(boxGallery.innerHTML);
 });
 
 const btnDestroy = document.querySelector("button[data-destroy]");
 
-btnDestroy.addEventListener("click", () => {});
+btnDestroy.addEventListener("click", () => {
+  boxGallery.innerHTML = "";
+});
